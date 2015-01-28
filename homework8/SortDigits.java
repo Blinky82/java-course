@@ -7,6 +7,10 @@ import java.util.Arrays;
  * Created by blinky on 24.01.15.
  */
 
+//Направете програма, която приема 10 числа. 
+//Подредете във възходящ ред всички четни числа в масив. 
+//Подредете всички нечетни числа в нискодящ ред в друг масив
+
 public class SortDigits {
 
     private int[] array;
@@ -26,7 +30,7 @@ public class SortDigits {
 
     public void setArray(int[] array) {
         this.array = array;
-        {
+      
 
             System.out.printf("Array after sorting in ascending order: %s%n", Arrays.toString(array));
 

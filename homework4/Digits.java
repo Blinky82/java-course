@@ -6,12 +6,9 @@ import java.util.Scanner;
 
 public class Digits {
 
-
-
-        public static void main (String args[])
-
-        {
-            int digits;
+        public static void main (String args[]){
+           
+        int digits;
         System.out.print("Enter a number = ");
 
         Scanner in = new Scanner(System.in);
@@ -19,18 +16,20 @@ public class Digits {
 
     }
 
-    for (int i = 0; i < digits.length; i++)
-    {
+    for (int i = 0; i < digits.length; i++){
+    
         digits[i] = in.nextInt();
     }
     in.close();
     arr(digits);
 }
     public static void arr(int[] array) {
+        
         int x = 0, start = 0, num = array[0];
         boolean counter = true;
         int[] last = new int[array.length];
         int y = 0, last = 0;
+         
         while (counter) {
             if (num < array[x + 1]) {
                 start = x + 1;
@@ -48,6 +47,7 @@ public class Digits {
                 y = 0;
             }
             x++;
+           
             if (x == array.length - 1) {
                 counter = false;
             }

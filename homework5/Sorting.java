@@ -6,6 +6,9 @@ import java.util.Scanner;
  * Created by blinky on 16.01.15.
  */
 
+//Направете програма, която приема първо размер на integer масив, 
+//а след това и цислата на масива.  Сортирайте масива и го изведете на екрана
+
     public class Sorting {
 
         public static void main(String[] args) {

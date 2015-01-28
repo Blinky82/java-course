@@ -3,6 +3,9 @@ package Random;
 /**
  * Created by blinky on 24.01.15.
  */
+
+//Направете проучване и имплементирайте алгоритъма Quick Sort.
+
 public class QuickSort {
 
     private int array[];

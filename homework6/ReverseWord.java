@@ -7,10 +7,13 @@ import java.util.Arrays;
 /**
  * Created by blinky on 19.01.15.
  */
+
+//Направете програма която приема дума и я извежда на екрана нейните букви в обратен ред.
+
 public class ReverseWord {
 
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
+    
         String org, reverse = "";
         Scanner in = new Scanner(System.in);
 

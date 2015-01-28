@@ -4,29 +4,33 @@ import java.util.Scanner;
  * Created by blinky on 01.12.14.
  */
 
-    class Game
-{
+//Създайте програма, която изчислява бонус точки на база резултат от игра. 
+//Потребителят трябва да въведе своите точни в интервалa[1,;9]. 
+//Ако точките са в интервала [1;3] Умножете ги по 5. 
+//Ако точките са в интервала [4;6] Умножете ги по 10. 
+//Ако точките са в интервала [7;9] Умножете ги по 50. 
+//Резултатът изведете на екрана.
+
+    class homework5 {
+
         public static void main(String[] args) {
 
-            int x = "";
-            x = 1, 9;
-            int y = "";
+  Scanner scanner = new Scanner(System.in);
 
-            Scanner scanner = new Scanner(System.in);
-            Scanner input = new Scanner(System.in, "UTF-8");
+  System.out.println("Въведете вашите точки тук:");
+  
+  int x = scanner.nextInt();
+  int y = 0;
+  
+  if (1 <= x && x <= 3) {
+   y = x * 5;
+  } else if (4 <= x && x <= 7) {
+   y = x * 10;
+  } else if (7 <= x && x <= 9) {
+   y = x * 50;
+  }
+  
+  System.out.println("Вашият резултат е : "+y);
 
-            System.out.println("Въведете вашите точки тук:");
-            x = input.nextInt();
-
-            if (1 < x < 3) y = x*5 {
-                System.out.print("Вашият общ резултат е:" + y);
-
-            }else if (4 < x < 7) y = x*10 {
-                System.out.print("Вашият общ резултат е:" + y);
-
-            }else if (7 < x < 9) (y = x*50) {
-                    System.out.print("Вашият общ резултат е:" + y);
-                }
-
-            }
-        }
+ }
+}

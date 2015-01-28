@@ -10,15 +10,21 @@ import java.util.Arrays;
 public class Senences {
 
     public static void main(String[] args) {
-        String sentance = "Програмист малко съм аз";
+      // String sentеnce =
+     // "Програмист малко съм аз. Тествам парсване на изреченията? Мне! Не мога да тествам това.";
 
-        String[] parts = sentance.split(" |,|!");
+       System.out.println("Напиши изречение");
+       Scanner input = new Scanner(System.in);
+       String sentеnce = input.nextLine();
 
-
-
-        for (int j = parts.length - 1; j >= 0; j--){
-
-            System.out.println(parts[j]);
-        }
-    }
+       System.out.println("Напиши дума");
+       String wordToFind = input.next();
+       String[] parts = sentеnce.split("[.!?]");
+ 
+    for (int j = 0; j < parts.length; j++) {
+       if(parts[j].contains(wordToFind))
+   
+        System.out.println(parts[j]);
+  }
 }
+

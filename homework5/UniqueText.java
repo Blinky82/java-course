@@ -10,49 +10,34 @@ import java.util.regex.Matcher;
 /**
  * Created by blinky on 16.01.15.
  */
+
+//Направете програма, която приема текст и извежда на екрана всички думи, 
+//които са уникални (срещат се само веднъж).
+
 public class UniqueText {
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
+  
+      Scanner sc = new Scanner(System.in);
+      HashMap<String, Integer> wordsM = new HashMap<String, Integer>();
+      String tmp = sc.nextLine();
+      String[] arr = tmp.split(" ");
+  
+  for (int i = 0; i < arr.length; i++) {
 
-        Set s = new HashSet();
+    if (!wordsM.containsKey(arr[i])) {
+    wordsM.put(arr[i], 1);
+   } else {
+    wordsM.put(arr[i], wordsM.get(arr[i]) + 1);
+   }
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter text here: ");
-
-        String text = sc.nextLine();
-
-        for(int i=0; i<args.length;i++){
-            if(!s.add(args[i]))
-                System.out.println("Duplicate detected: " + args[i]);
-        }
-
-        System.out.println(s.size() + " distinct words detected : " + s );
-    }
+  }
+  for (Map.Entry<String, Integer> entry : wordsM.entrySet()){
+   if(entry.getValue()==1){
+    
+    System.out.println(entry.getKey() + " - " + entry.getValue());
+   }
+  }
+ }
 }
-
-//    public static void main(String[] args) {
-//
-//
-//    Scanner sc = new Scanner(System.in);
-//    System.out.println("Enter text here: ");
-//
-//    String text = sc.nextLine();
-//
-//    private String str;
-//
-//    Set<String> unique = new HashSet<String>(Arrays.asList(str.toLowerCase().split("[-.,:;?!~\\s]+")));
-//
-//    String[] words;
-//    Set<String> uniqueWords = new HashSet<String>();
-//    words = str1.split("[\\W]+ ");
-//
-//    for(int i = 0; i < words.length; i++)
-//
-//    {
-//        uniqueWords.add(words[i]);
-//
-//        System.out.println(uniqueWords);
-//    }
-//}
-//        }
 

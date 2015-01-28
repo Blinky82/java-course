@@ -1,21 +1,26 @@
 /**
 * Created by blinky on 08.12.14.
 */
+
+//Направете програма която принитра на конзолата всички карти 
+//от стандартанта колода за игра. Подредете информацията в 13 реда и 4 колони
+
 public class homework23 {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        char[] cards = "0AKQJT98765432AKQJT98765432AKQJT98765432AKQJT98765432".toCharArray(); //T stays for 10 card
-        for(int i = 1; i < cards.length; i++)
-        {
-            System.out.print(cards[i] + " ");
-            if (i%4==0)
-            {
-                System.out.println();
-            }
-        }
+  String[] cards = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J",
+    "Q", "K", "A" };
+  
+  for (int j = 0; j < 4; j++) 
+    for (int i = 1; i <= cards.length; i++) {
+    
+    System.out.print(cards[i - 1] + " ");
+    
+     if ((i * cards.length + j) % 4 == 0) {
+      System.out.println();
     }
-}
+ }
 
 
 

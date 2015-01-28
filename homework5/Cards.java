@@ -5,6 +5,10 @@ import java.util.Set;
 /**
  * Created by blinky on 16.01.15.
  */
+
+//Направете програма, която приема 5 карти от тестето за игра. 
+//Програмта трябва да извежда на екрана дали играчът има чифт, сет или каре.
+
 public class Cards {
 
     public static void main(String[] args) {
@@ -17,12 +21,11 @@ public class Cards {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         ArrayList<String> hand = new ArrayList<String>();
 
-        for( int i = 0; i < cards.length; i++)
-        {
+        for( int i = 0; i < cards.length; i++) {
             cards[i] = i;
         }
-        for( int i = 0; i < cards.length; i++)
-        {
+        for( int i = 0; i < cards.length; i++) {
+       
             int index = (int)(Math.random() * cards.length);
             int temp = cards[i];
             cards[i] = cards[index];
@@ -30,20 +33,17 @@ public class Cards {
         }
         System.out.println("Your hand of 5 cards is:");
 
-        for( int i = 0; i < 5; i++)
-        {
+        for( int i = 0; i < 5; i++) {
+   
             String card = (ranks[cards[i] % 13]+" of "+suits[cards[i] / 13]);
             System.out.println(card);
             hand.add(ranks[cards[i] % 13]);
         }
-        for(String p:hand)
-        {
-            if(map.get(p)==null)
-            {
+        for(String p:hand){
+            if(map.get(p)==null){          
                 map.put(p, 1);
             }
-            else
-            {
+            else {
                 Integer tmp = map.get(p);
                 map.put(p, tmp+1);
             }
@@ -53,23 +53,18 @@ public class Cards {
         System.out.println("\nYou hold:");
         Set<String> handKeys = map.keySet();
 
-        for (String card : handKeys)
+        for (String card : handKeys) {
 
-        {
             int count = map.get(card);
-            if(count==4)
-
-            {
+            if(count==4){
                 System.out.printf("%s : %d -> Box.\n", card, count);
                 break;
             }
-            else if (count==3)
-            {
+            else if (count==3) {
                 System.out.printf("%s : %d -> Set.\n", card, count);
                 break;
             }
-            while (count==2)
-            {
+            while (count==2) {
                 System.out.printf("%s : %d -> Pair.\n", card, count);
                 break;
             }

@@ -1,10 +1,6 @@
-package Random;
+package Sellable;
 
-/**
- * Created by blinky on 24.01.15.
- */
-
-    public class ExceptionMessage extends Exception {
+public class ExceptionMessage extends Exception {
 
     private static final long message = 404;
 

@@ -1,54 +1,28 @@
+import java.util.*;
+
 /**
- * Created by blinky on 06.01.15.
+ * Created by blinky on 05.01.15.
  */
 
-import java.util.Scanner;
+//Направете програма, която приема 20 думи и принтира на екрана думите които са въведени повече от един път.
 
-public class words
+public class words {
 
-{
-
-    public static void main(String []args)
-
-    {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter a word: ");
-
-        String s1= sc.nextLine();
-
-        String s2=s1.replace(" ","");
-        char [] ch=s2.toCharArray();
-
-        int counter=0;
-
-        for(int i=0;i<ch.length;i++)
-        {
-            int count=0;
-
-            for(int j=0;j<ch.length;j++)
-            {
-                if(ch[i]==ch[j])
-                    count++;
-            }
-            if(count>1)
-            {
-                boolean flag=false;
-
-
-                for (int k=i-1;k>=0 ;k-- )
-                {
-                    if(ch[i] == ch[k] )
-                        flag=true;
-                }
-                if( !flag )
-                    counter=counter+1;
-            }
-        }
-        if(counter > 0)
-            System.out.println("Number of repeating charcters in the given string is/are " +counter);
-        else
-            System.out.println("Sorry there is/are no repeating words!");
-    }
+ public static void main(String[] args) {
+  
+  Scanner input = new Scanner(System.in);
+  ArrayList<String> words = new ArrayList<String>();
+  
+ for (int i = 0; i < 20; i++) {
+   words.add(input.next());
+  }
+  Collections.sort(words);
+  
+  for (int i = 0; i < words.size() - 1; i++) {
+    while (i<words.size() - 1 && words.get(i).equals(words.get(i + 1))) {
+    System.out.println("Repeated word is: " + words.get(i));
+    i++;
+   }
 }
+
+

@@ -1,28 +1,21 @@
-public class SUV extends car {
+package Car;
 
-    private boolean offroad;
+public class SUV extends Car {
+	
+	private boolean isOffroad;
 
-    public SUV(int pricing, boolean offroad) {
+	public boolean isOffroad() {
+		return isOffroad;
+	}
 
-        this.offroad = false;
-        super.pricing = pricing;
+	public void setOffroad(boolean isOffroad) {
+		this.isOffroad = isOffroad;
+	}
 
-    }
-
-    public boolean getOffroad() {
-        return offroad;
-    }
-
-    public void setOffroad(boolean offroad) {
-        this.offroad = offroad;
-    }
-
-    public void SUVout(){
-        if (offroad==true){
-            System.out.println("The vehicle is Offroad : \n Pricing :%d",this.offroad,super.pricing);
-        }
-        else{
-            System.out.println("The vehicle is not Offroad ! \n Pricing : %d",super.pricing);
-        }
-    }
+	public SUV(int price,boolean isOffroad) {
+		super(price);
+		this.isOffroad = isOffroad;
+	}
+	
 }
+

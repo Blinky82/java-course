@@ -4,6 +4,9 @@ import java.util.Scanner;
  * Created by blinky on 07.01.15.
  */
 
+//Направете програма която приема брой дни и изчислява колко секунди представляват тези дни. 
+//Опитайте се да използвате обектно ориентиран подход при решението на задачата
+
 public class Results extends DaysToSeconds {
 
     private int sec;

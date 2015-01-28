@@ -6,6 +6,9 @@ import java.util.Scanner;
 /**
  * Created by blinky on 24.01.15.
  */
+
+//Направете програма, която приема 30 числа и намира всички тройки еднакви числа.
+
 public class TripleDigits {
 
     Scanner scan = new Scanner(System.in);

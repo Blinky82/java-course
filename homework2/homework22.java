@@ -1,6 +1,10 @@
 /**
  * Created by blinky on 08.12.14.
  */
+
+//Направете програма, която принтира на екрана числата от 30 до 1 
+//в обратен ред подредени в 5 реда и 6 колони
+
 public class homework22 {
 
     public static void main(String[] args) {

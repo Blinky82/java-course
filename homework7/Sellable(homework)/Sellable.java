@@ -1,8 +1,6 @@
-package Random;
+package Sellable;
 
-/**
- * Created by blinky on 24.01.15.
- */
-
-interface Sellable {
-    }
+public interface Sellable {
+	void setPrice(int price);
+	int getPrice();
+}

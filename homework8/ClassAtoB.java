@@ -9,8 +9,11 @@ import java.util.LinkedList;
  * Created by blinky on 24.01.15.
  */
 
+//Направете програма, която приема изречение и подрежда по азбучен ред всички думи от него.
+
 public class ClassAtoB {
-    public static void main(String[] args) {
+     
+     public static void main(String[] args) {
 
         Queue<String> queue = new LinkedList<String>();
 
@@ -18,7 +21,7 @@ public class ClassAtoB {
 
         Scanner in = new  Scanner (System.in);
 
-        System.out.println("Enter a string : ");
+        System.out.println("Enter a string: ");
 
         String text = in.nextLine();
         in.close();

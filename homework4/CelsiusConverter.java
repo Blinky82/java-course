@@ -3,21 +3,39 @@ import java.util.*;
 /**
  * Created by blinky on 05.01.15.
  */
-public class CelsiusConverter {
 
-    public static void main(String[] args) {
+//Напрате клас който коквертира градуси от Целзии във Ференхайт.
 
-        float temp;
+public class FahrenheitConverter {
+ 
+ private float celsiusDeg;
 
-        Scanner in = new Scanner(System.in);
+ public float getCelsiusDeg() {
+  return celsiusDeg;
+ }
 
-        System.out.println("Enter temperatue in Fahrenheit");
-        temp = in.nextInt();
+ public void setCelsiusDeg(float celsiusDeg) {
+  this.celsiusDeg = celsiusDeg;
+ }
 
-        temp = ((temp - 32)*5)/9;
+ public FahrenheitConverter () {
 
-        System.out.println("Temperatue in Celsius = " + temp);
-    }
+ }
+
+ public FahrenheitConverter (float inDeg) {
+  this.celsiusDeg = inDeg;
+ }
+ public float convertToFahrenheit(){
+
+  return (this.celsiusDeg * 9) / 5 + 32;
+ }
+
+ public static void main(String[] args) {
+
+  FahrenheitConverter  test=new FahrenheitConverter ();
+  test.setCelsiusDeg(36);
+  System.out.println("Temperatue in Celsius = " + test.convertToFahrenheit());
+ }
 }
 
 

@@ -1,38 +1,42 @@
-package Random;
+package Sellable;
 
-/**
- * Created by blinky on 24.01.15.
- */
+public class Mobile implements Sellable {
 
+	private String ios;
+	private String color;
+	private int price;
 
-    public class Mobile implements Sellable {
+	public Mobile() {
+	}
 
-        private String ios;
-        private String color;
+	public Mobile(String ios, String color) {
+		this.ios = ios;
+		this.color = color;
+	}
 
-        public Mobile() {
-        }
+	public String getIos() {
+		return ios;
+	}
 
-    public Mobile(String ios, String color) {
-            this.ios = ios;
-            this.color = color;
-        }
+	public void setIos(String ios) {
+		this.ios = ios;
+	}
 
-    public String getIos() {
-            return ios;
-        }
+	public String getColor() {
+		return color;
+	}
 
-    public void setIos(String ios) {
-            this.ios = ios;
-        }
+	public void setColor(String color) {
+		this.color = color;
+	}
 
+	@Override
+	public void setPrice(int price) {
+		this.price = price;
+	}
 
-    public String getColor() {
-            return color;
-        }
-
-    public void setColor(String color) {
-            this.color = color;
-        }
-    }
-
+	@Override
+	public int getPrice() {
+		return price*3;
+	}
+}

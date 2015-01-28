@@ -1,53 +1,52 @@
+package Stock;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Created by blinky on 05.01.15.
  */
+
+//Дефинирайте абсрактен клас Stock който съдържа информация за артикул в магазин - 
+//цена и boolean поле дали е наличн. Реализирайте класове за месо, зеленчуци, плодове, 
+//напитки и десерти с поне по 2 уникални полета, който характеризират артикула
+
 public class Store {
 
-        private String name;
-        private String location;
-        private ArrayList stock = new ArrayList();
-        public Store() {
-        }
-        public ArrayList getStock() {
-            return stock;
-        }
-        public Store(String name, String location) {
-            setName(name);
-            setLocation(location);
-        }
-        public String getName() {
-            return name;
-        }
-        public void setName(String name) {
-            this.name = name;
-        }
-        public String getLocation() {
-            return location;
-        }
-        public void setLocation(String location) {
-            this.location = location;
-        }
-        public static void main(String[] args) {
-            Store local = new store();
-            local.setName("Sofia");
-            local.getStock().add(new Veggies(true, "fresh", "2"));
+	private String name;
+	private String location;
+	private ArrayList<Stock> stock = new ArrayList<Stock>();
 
-            Scanner in = new Scanner(System.in);
-            System.out.println("Stock: ");
+	public Store() {
+	}
 
-            veggies veggiesName = new veggiesName();
-            String vegname = null;
+	public ArrayList<Stock> getStock() {
+		return stock;
+	}
 
-            veggiesName = in.nextLine();
-            veggies.setType(veggiesName;
-        }
-        public void available(stock toadd) {
-            stock.add(toadd);
-        }
+	public Store(String name, String location) {
+		setName(name);
+		setLocation(location);
+	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public void addStock(Stock toadd) {
+		stock.add(toadd);
+	}
 
 }
-

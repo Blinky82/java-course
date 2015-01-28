@@ -2,10 +2,13 @@ package Random;
 
 import java.util.Scanner;
 
-
 /**
  * Created by blinky on 19.01.15.
  */
+
+//Направете програма, която приема текст, а след това дума 
+//и принтира на екрана колко пъти се среща съответната дума
+
 public class WordsCounter {
 
 
