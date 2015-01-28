@@ -17,38 +17,43 @@ public class SortDigits {
 
     public static void main(String[] args) {
 
-        int[] array = new int[10];
+  int[] odd = new int[10];
+  int[] even = new int[10];
+  int currOddPos = 0;
+  int currEvenPos = 0;
+  Scanner in = new Scanner(System.in);
+  int tmp = 0;
+  
+  for (int i = 0; i < 10; i++) {
+   tmp = in.nextInt();
+  
+  if (tmp % 2 == 0) {
+    even[currEvenPos] = tmp;
+    currEvenPos++;
+   } else {
+    odd[currOddPos] = tmp;
+    currOddPos++;
+   }
+  }
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("Enter ten numbers: ");
-        String text = in.nextLine();
-        in.close();
+  Arrays.sort(odd);
+  Arrays.sort(even);
+  for(int i = 0; i < even.length/2; i++) {
+ 
+      int temp = even[i];
+      even[i] = even[even.length - i - 1];
+      even[even.length - i - 1] = temp;
+  }
+  System.out.println("Odd numbers");
+  for(int i = 0 ;i < currOddPos;i++) {
 
-        System.out.println("Array before sorting: " + Arrays.toString(array));
-
-        Arrays.sort(array);}
-
-    public void setArray(int[] array) {
-        this.array = array;
-      
-
-            System.out.printf("Array after sorting in ascending order: %s%n", Arrays.toString(array));
-
-
-//    public static int binarySearch(long[] a, long key) {
-//        int bottom = 0;
-//        int top = a.length - 1;
-//
-//        while (bottom <= top) {
-//            int mid = bottom + (top - bottom) / 2;
-//            if (key < a[mid]) top = mid - 1;
-//            else if (key > a[mid]) bottom = mid + 1;
-//            else return mid;
-//        }
-//        return -1;
-        }
-    }
-
+   System.out.println(odd[i]);
+  }
+  System.out.println("Even numbers");
+  for(int i = 0;i < currEvenPos;i++) {
+ 
+   System.out.println(even[i]);
+  }
+ }
 }
-
 
