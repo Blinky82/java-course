@@ -1,7 +1,7 @@
 package Car;
 
 public class SUV extends Car {
-	
+
 	private boolean isOffroad;
 
 	public boolean isOffroad() {
@@ -16,6 +16,7 @@ public class SUV extends Car {
 		super(price);
 		this.isOffroad = isOffroad;
 	}
-	
+
 }
+
 

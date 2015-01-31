@@ -102,6 +102,5 @@ public class Company {
                     + companies.get(i).getName());
         }
     }
-
 }
 

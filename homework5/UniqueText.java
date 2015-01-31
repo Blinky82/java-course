@@ -32,7 +32,7 @@ public class UniqueText {
    }
 
   }
-  for (Map.Entry<String, Integer> entry : wordsM.entrySet()){
+  for (Map.Entry<String, Integer> entry : wordsM.entrySet()) {
    if(entry.getValue()==1){
     
     System.out.println(entry.getKey() + " - " + entry.getValue());

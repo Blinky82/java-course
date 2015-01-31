@@ -1,7 +1,9 @@
 package Random;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
+
 /**
  * Created by blinky on 16.01.15.
  */

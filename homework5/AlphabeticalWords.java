@@ -18,33 +18,34 @@ public class AlphabeticalWords {
 
     public static void main(String[] args) {
 
-  Scanner sc = new Scanner(System.in);
-  System.out.println("Please enter a line of text");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter a line of text");
 
-  String userInput = sc.nextLine();
+        String userInput = sc.nextLine();
 
-  userInput = userInput.toLowerCase();
+        userInput = userInput.toLowerCase();
 
-  userInput = userInput.replaceAll("\\W", " ");
-  userInput = userInput.replaceAll("  ", " ");
+        userInput = userInput.replaceAll("\\W", " ");
+        userInput = userInput.replaceAll("  ", " ");
 
-  String[] tokens = userInput.split(" ");
-  System.out.println(userInput);
+        String[] tokens = userInput.split(" ");
+        System.out.println(userInput);
 
-  ArrayList<String> items = new ArrayList<String>();
+        ArrayList<String> items = new ArrayList<String>();
 
-  items.addAll(Arrays.asList(tokens));
+        items.addAll(Arrays.asList(tokens));
 
-  Collections.sort(items);
-  ArrayList<String> writtenWords = new ArrayList<String>();
-   
-  for (int i = 0; i < items.size(); i++) {
-     if (!writtenWords.contains(items.get(i))) {
-    
-    System.out.println(items.get(i));
-    writtenWords.add(items.get(i));
-   
-   }
-  }
+        Collections.sort(items);
+        ArrayList<String> writtenWords = new ArrayList<String>();
+
+        for (int i = 0; i < items.size(); i++) {
+            if (!writtenWords.contains(items.get(i))) {
+
+                System.out.println(items.get(i));
+                writtenWords.add(items.get(i));
+
+            }
+        }
+    }
 }
 

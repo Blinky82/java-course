@@ -31,6 +31,4 @@ public class HashSetExample {
         System.out.println(town);
 
     }
-
-
 }
